@@ -1,3 +1,4 @@
+// @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -9,7 +10,7 @@ import { defineConfig, devices } from '@playwright/test';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
- * See https://playwright.dev/docs/test-configuration.
+ * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
   testDir: './tests',
@@ -26,7 +27,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://wwww.instagram.com',
+    // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -40,13 +41,13 @@ export default defineConfig({
     },
 
     // {
-    //  name: 'firefox',
-    //  use: { ...devices['Desktop Firefox'] },
+    // name: 'firefox',
+    // use: { ...devices['Desktop Firefox'] },
     // },
 
-    // {
-    //  name: 'webkit',
-    //  use: { ...devices['Desktop Safari'] },
+    // { 
+    // name: 'webkit',
+    // use: { ...devices['Desktop Safari'] },
     // },
 
     /* Test against mobile viewports. */
@@ -77,3 +78,4 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
